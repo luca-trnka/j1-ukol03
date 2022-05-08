@@ -58,6 +58,7 @@ public class HlavniProgram {
         //vypnu ho klidně několikrát znova a nic se nestane
         lucinyPocitac.vypniSe();
         lucinyPocitac.vypniSe();
+
     }
 
 }
