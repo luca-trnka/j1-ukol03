@@ -52,7 +52,19 @@ public class HlavniProgram {
         //lucinyPocitac.zapniSe();  //
         //System.out.println();
 
-        //jdu ho tedy vypnout
+        //přidám soubory a kouknu kolik mám místa
+        lucinyPocitac.vytvorSouborOVelikosti(100_000_000_000L);
+        System.out.println("Využité místo na disku po přidání souboru je: " + lucinyDisk.getVyuziteMisto());
+
+        //zkusím přidat další soubory, které se už nevejdou a počítač mi je nenechá uložit.
+        lucinyPocitac.vytvorSouborOVelikosti(200_000_000_000L);
+        System.out.println("Využité místo na disku po přidání souboru je: " + lucinyDisk.getVyuziteMisto());
+        System.out.println();
+
+        lucinyPocitac.vymazSouboryOVelikosti(50_000_000_000L);
+        System.out.println("Využité místo na disku po smazání souboru je: " + lucinyDisk.getVyuziteMisto());
+
+        //jdu ho vypnout
         lucinyPocitac.vypniSe();
 
         //vypnu ho klidně několikrát znova a nic se nestane

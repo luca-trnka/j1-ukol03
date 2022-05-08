@@ -71,4 +71,40 @@ public class Pocitac {
     }
 
 }
+
+    // metody:  vytvorSouborOVelikosti(long velikost),  vymazSouboryOVelikosti(long velikost)
+
+
+    public void vytvorSouborOVelikosti(long velikost) {
+
+        if (jeZapnuty) {
+            long vyuziteMisto = pevnyDisk.getVyuziteMisto();//aktuální hodnota mista na disku
+            long meneMista = vyuziteMisto + velikost; //proměnná vyuziteMisto zvýšené o zadanou velikost
+
+            if (meneMista > pevnyDisk.getKapacita()) {
+                System.err.println("Soubor už se na disk už nevejde.");
+            } else {
+                pevnyDisk.setVyuziteMisto(meneMista);
+            }
+        } else {
+            System.err.println("Počítač je vypnutý, nemůžeš nic přidat.");
+        }
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+
+        if (jeZapnuty) {
+            long vyuziteMisto = pevnyDisk.getVyuziteMisto();//aktuální hodnota mista na disku
+            long viceMista = vyuziteMisto - velikost; //proměnná vyuziteMisto snížené o zadanou velikost
+
+            if (viceMista < 0) {
+                System.err.println("Mažeš víc než máš.");
+            } else {
+                pevnyDisk.setVyuziteMisto(viceMista);
+            }
+        } else {
+            System.err.println("Počítač je vypnutý, nemůžeš nic mazat.");
+                }
+            }
+
 }
