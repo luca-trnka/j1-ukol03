@@ -59,6 +59,7 @@ public class HlavniProgram {
         lucinyPocitac.vypniSe();
         lucinyPocitac.vypniSe();
 
+
     }
 
 }
